@@ -18,9 +18,9 @@ const passport = require("passport");
 const jwt = require("jsonwebtoken");
 
 // Home Page
-// router.get("/", function (req, res, next) {
-//   res.json("Home Page");
-// });
+router.get("/", function (req, res, next) {
+  res.json("Ecommerce CH2305 Backend Deployed on Heroku");
+});
 
 router.post("/upload", upload.single("avatar"), (req, res) => {
   res.json({ message: "imagen avatar subida" });
