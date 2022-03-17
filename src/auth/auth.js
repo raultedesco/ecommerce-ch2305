@@ -50,12 +50,12 @@ passport.use('login', new localStrategy({
     usernameField: 'email',
     passwordField: 'password',
 }, async (email, password, done) => {
-    console.log(email)
-    console.log(password)
+    logger.info(`auth file --> login:email:${email}`)
+    logger.info(`auth file --> login:password:${email}`)
     try {
     
         const user = await User.findOne({ email })
-        console.log(user)
+        logger.info(`auth file --> login:user:model:${user}`)
         if (!user) {
             return done(null, false, { message: 'User not found' })
         }
