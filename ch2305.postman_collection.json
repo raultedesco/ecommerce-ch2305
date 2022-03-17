@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "f8a321e9-5158-4feb-8106-9cf214a702f4",
+		"name": "ch2305",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "producto",
+			"item": [
+				{
+					"name": "get productos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://ecommerce-ch2305.herokuapp.com/api/productos/",
+							"protocol": "https",
+							"host": [
+								"ecommerce-ch2305",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"productos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post products",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"image\":\"https://cdn3.iconfinder.com/data/icons/education-209/64/board-math-class-school-128.png\",\n      \"price\": 123,\n      \"description\": \"Pizarra\",\n      \"category\": \"Colegio\" \n      \n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ecommerce-ch2305.herokuapp.com/api/productos/",
+							"protocol": "https",
+							"host": [
+								"ecommerce-ch2305",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"productos",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "carrito",
+			"item": [
+				{
+					"name": "create carrito",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"raul@gmail.com\",\n     \"direccion\":\"Quintana 2421 - Corrientes Capital\" \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ecommerce-ch2305.herokuapp.com/api/carritos/",
+							"protocol": "https",
+							"host": [
+								"ecommerce-ch2305",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"carritos",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add  product carrito",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyMzI3OWM5MzFhYjAyODAxZTMzMDg1MyIsImVtYWlsIjoicmF1bEBnbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZX0sImV4cCI6MTY0NzQ4NDc5MywiaWF0IjoxNjQ3NDgzODkzfQ.jWCELi3EqKN4CCJ7cDElGpPEdjusyc6ewNUZHm9LhUM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"productId\":\"6232773aec7b159c478df959\",\n    \"quantity\":1,\n    \"price\":123\n    \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ecommerce-ch2305.herokuapp.com/api/carritos/62329aa65fbe43f0566f1905",
+							"protocol": "https",
+							"host": [
+								"ecommerce-ch2305",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"carritos",
+								"62329aa65fbe43f0566f1905"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "orden",
+			"item": [
+				{
+					"name": "generate orden",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjYyMzI3OWM5MzFhYjAyODAxZTMzMDg1MyIsImVtYWlsIjoicmF1bEBnbWFpbC5jb20iLCJpc0FkbWluIjpmYWxzZX0sImV4cCI6MTY0NzQ4NDc5MywiaWF0IjoxNjQ3NDgzODkzfQ.jWCELi3EqKN4CCJ7cDElGpPEdjusyc6ewNUZHm9LhUM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"mail\":\"otromail@mail.com\"\n    \n}"
+						},
+						"url": {
+							"raw": "https://ecommerce-ch2305.herokuapp.com/api/ordenes/62329aa65fbe43f0566f1905",
+							"protocol": "https",
+							"host": [
+								"ecommerce-ch2305",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"ordenes",
+								"62329aa65fbe43f0566f1905"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "usuario",
+			"item": [
+				{
+					"name": "get login",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
