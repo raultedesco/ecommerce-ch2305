@@ -8,7 +8,7 @@ const UserSchema = new Schema({
     type: String,
     required: true,
     unique: true,
-    validate: [validator.isEmail, 'Ingrese un mail valido'],
+    // validate: [validator.isEmail, 'Ingrese un mail valido'],
   },
   password: {
     type: String,

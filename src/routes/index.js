@@ -45,8 +45,7 @@ router.post("/login", async (req, res, next) => {
     try {
       if (err || !user) {
         logger.info(err);
-        const error = new Error("new Error");
-        return next(error);
+        return res.status(403).json(info)
       }
 
       req.login(user, { session: false }, async (err) => {
