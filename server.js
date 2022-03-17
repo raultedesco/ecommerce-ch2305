@@ -99,7 +99,7 @@ app.use(mensajeRouter)
 app.use(apiErrorHandler)
 
 
-const PORT = process.env.PORT || 8081
+const PORT = process.env.PORT || 5000
 
 httpServer.listen(PORT, function () {
   logger.info(`App listening on ${PORT}`)
