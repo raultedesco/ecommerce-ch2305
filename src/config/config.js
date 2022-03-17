@@ -8,7 +8,7 @@ module.exports = {
     exp_jwt_min: process.env.EXP_JWT_MIN,
     port: process.env.PORT,
     mongodb_str_conect: process.env.MONGO_DB_CONNECTION_STRING,
-    mongodb_atlas_str_conect: process.env.MONGO_DB_ATLAS_CONNECTION_STRING,
+    mongodb_atlas_str_conect: process.env.MONGO_ATLAS,
     warn_log_path: process.env.WARNLOGPATH,
     error_log_path: process.env.ERRORLOGPATH,
 }

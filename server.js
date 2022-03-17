@@ -21,7 +21,7 @@ const mensajeRouter = require('./src/routes/mensaje.router')
 //Mensaje service
 const mensajeService = require('./src/services/mensaje.services')
 
-mongoose.connect(process.env.MONGO_DB_ATLAS_CONNECTION_STRING, {
+mongoose.connect(process.env.MONGO_ATLAS, {
   useUnifiedTopology: true,
   useNewUrlParser: true,
 //   useCreateIndex: true,
